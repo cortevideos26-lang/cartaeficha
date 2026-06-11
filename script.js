@@ -25,7 +25,6 @@ function toggleTemplate() {
 
 function gerar() {
     const ficha = document.getElementById('inputFicha').value;
-    const valorCB = document.getElementById('valorCashback').value.trim();
     const template = document.getElementById('templateTexto').value;
 
     if (!ficha.trim()) {
@@ -71,7 +70,7 @@ function gerar() {
     mensagem = mensagem.replace(/\{tratamento\}/g, tratamento);
     mensagem = mensagem.replace(/\{nome\}/g, nome);
     mensagem = mensagem.replace(/\{cpf\}/g, cpf);
-    mensagem = mensagem.replace(/\{valor\}/g, valorCB);
+    mensagem = mensagem.replace(/\{valor\}/g, cashbackFormatado);
     mensagem = mensagem.replace(/\{data\}/g, dataStr);
 
     const output = document.getElementById('outputMensagem');
