@@ -57,14 +57,6 @@ function gerar() {
     const dataStr = amanha.toLocaleDateString('pt-BR');
 
     let tratamento = nome;
-    if (tratamento) {
-        const nomeUpper = nome.toUpperCase();
-        if (nomeUpper.startsWith('SR ')) {
-            tratamento = 'Sr.' + nome.substring(3);
-        } else {
-            tratamento = 'Sr.' + nome;
-        }
-    }
 
     let mensagem = template;
     mensagem = mensagem.replace(/\{tratamento\}/g, tratamento);
